@@ -1,0 +1,83 @@
+
+    <!DOCTYPE HTML>
+    <html>
+    
+    <body>
+       
+    	<form name="calc">
+    		<div>
+    		<input type="text" id="number1"  name="number1" value="1-е число" onchange="number1text()" >
+    		<input type="text" id = "number2" name="number2" value="2-е число" onchange="number2text()">	
+			</div>
+			<div>
+			<input type="button" value="+" name="age"  onclick="calculPlus()"> 	
+			<input type="button" value="-" name="age"  onclick="calculMinus()"> 
+			<input type="button" value="/" name="age"  onclick="calculDel()"> 
+			<input type="button" value="*" name="age"  onclick="calculMulti()"> 
+			</div>
+		Итог 
+		<input type="text" id="example"   value="0"  >
+		<input type="text" id="rez"   value="0"  >
+		
+		</form>
+			
+            
+        <script>
+			
+	let a=0;
+	let b=0;
+	let c=0;
+function numberOne(){
+	a=a+"1";
+	console.log(a);
+}
+function numberTwo(){
+	a=a+"2";
+	a=Number(a);
+	console.log(a);
+	}
+function number1text(){
+	let number1=document.getElementById ("number1");
+    a=Number(number1.value);
+	console.log(a);
+}
+function number2text(){
+	let number2=document.getElementById ("number2");
+    b=Number(number2.value);
+	console.log(b);
+}
+function calculPlus(){
+	c=a+b;
+	console.log(c);
+	document.getElementById ("rez").value=c;
+	document.getElementById("example").value=` ${a}+${a}=`;
+} 
+function calculMinus(){
+	c=a-b;
+	console.log(c);
+	document.getElementById ("rez").value=c;
+	document.getElementById("example").value=` ${a}-${a}=`;
+} 
+function calculDel(){
+	c=a/b;
+	console.log(c);
+	document.getElementById ("rez").value=c;
+	document.getElementById("example").value=` ${a}/${a}=`;
+
+} 
+function calculMulti(){
+	c=a*b;
+	console.log(c);
+	document.getElementById ("rez").value=c;
+    document.getElementById("example").value=`${a}*${a}=`;
+
+} 
+// function number(n){
+
+// 	let conclusion=document.getElementsByName("conclusion");
+// 	conclusion.value="conclusion"+"n";
+// }
+        </script>
+    </body>
+    
+    </html>

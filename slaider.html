@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slaider__img{
+            width: 50%;
+        }
+        .img{
+            width: 100%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="slaider__img">
+        <img src="slaider__img/1.jpg" id="img" alt="" class="img">
+
+<button class="slaider_forward" onclick="pictureBack()">назад</button>       
+<button class="slaider_forward" onclick="pictureForward()">вперед</button>
+ 
+    </div>
+</body>
+<script>
+let numberImg=1;
+function pictureForward(){
+let img=document.getElementById ("img");
+
+numberImg=Number(numberImg)+1;
+console.log(numberImg);
+img.src=(`slaider__img/${numberImg}.jpg`);
+}
+function pictureBack(){
+let img=document.getElementById ("img");
+numberImg=Number(numberImg)-1;
+console.log(numberImg);
+img.src=(`slaider__img/${numberImg}.jpg`);
+}
+
+</script>
+</html>
