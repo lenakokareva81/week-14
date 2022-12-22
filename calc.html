@@ -51,7 +51,7 @@
 			<input type="button" value="8"   class="buttonNumber"  onclick="number(8)"> 
 			<input type="button" value="9"  class="buttonNumber"  onclick="number(9)"> 
 		
-			<input type="button" value="+"  class="buttonCalc" onclick="actionSign(1)"> 	
+			<input type="button" value="+"  class="buttonCalc" onclick="actionSign('+')"> 	
 			<input type="button" value="-"  class="buttonCalc" onclick="actionSign(2)"> 
 			<input type="button" value="/" class="buttonCalc"  onclick="actionSign(3)"> 
 			<input type="button" value="*" class="buttonCalc"  onclick="actionSign(4)"> 
@@ -87,12 +87,14 @@
 //     b=Number(number2.value);
 // 	console.log(b);
 // }
-function actionSign(act){
-	(act==1) ? calc="+":
-	(act==2) ? calc="-":
-	(act==3) ? calc="/":
-	(act==4) ? calc="*":
-	(act==5) ? d=a:console.log(d);
+function actionSign(calc){
+	console.log(calc);
+
+	// (act==1) ? calc="+":
+	// (act==2) ? calc="-":
+	// (act==3) ? calc="/":
+	// (act==4) ? calc="*":
+	// (act==5) ? d=a:console.log(d);
 	a=d;
 	d=0;
 	document.getElementById("conclusion").innerHTML=`${a} ${calc}`;
