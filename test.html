@@ -8,13 +8,16 @@
 </head>
 <body>
     <script>
-  let arr = ["a", "b"];
-
-arr.push(function() {
-  alert( arr );
-})
-
-arr[2](); // ?
+  // let arr = [[1,2], [1,2,3], [1,2,3,4]];
+  // let n = arr.length;
+  //   for (let i = 0; i < n; i++)
+  //       if (arr[i].length > 3) {
+  //           console.log(i);
+  //       }
+        let arr = [0, 1, false, 2, undefined, '', 3, null];
+        arr= arr.filter(e => typeof (e) == 'number');
+        arr= arr.filter(e => e != 0);
+        console.log(arr);
 
     </script>
 </body>
